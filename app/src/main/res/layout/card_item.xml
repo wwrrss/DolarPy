@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_activity_toolbar"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="CASA DE CAMBIO"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/nombre_casa"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_below="@+id/nombre_casa"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:text="COMPRA"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/titulo_compra"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_below="@+id/nombre_casa"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:text="VENTA"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/titulo_venta"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_below="@+id/titulo_compra"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:text="5100"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/valor_compra"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_below="@+id/titulo_venta"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:text="5200"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/valor_venta"
+                />
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

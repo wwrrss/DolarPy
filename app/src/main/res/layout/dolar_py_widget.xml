@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+     android:alpha="10"
+    android:paddingBottom="20dp"
+    android:orientation="vertical"
+
+     android:background="@drawable/appwidget_dark_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:paddingTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Cambios Chaco"
+            android:layout_marginLeft="5dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/nombre_casa" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Compra"
+            android:layout_below="@+id/nombre_casa"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:textColor="#ffffff"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Venta"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/nombre_casa"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+
+
+            android:textColor="#ffffff"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView3"
+            android:id="@+id/tValorCompra" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:layout_alignParentRight="true"
+
+            android:layout_alignLeft="@+id/textView3"
+            android:textColor="#ffffff"
+            android:id="@+id/tValorVenta" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Actualizado el:"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            android:layout_below="@+id/tValorCompra"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tActualizado" />
+
+    </RelativeLayout>
+
+</LinearLayout>
