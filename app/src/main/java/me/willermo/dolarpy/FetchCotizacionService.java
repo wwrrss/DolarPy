@@ -42,6 +42,11 @@ public class FetchCotizacionService extends IntentService {
         try {
              response = client.newCall(request).execute();
             if(response.code()==200){
+                if(!response.header("Content-Type").equals("application/json")){
+                    //si la respuesta no es un JSON salir de aqui!!!
+                    return;
+
+                }
                 SharedPreferences sharedPreferences = getApplication().getSharedPreferences("dolarpy",MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 String data = response.body().string();

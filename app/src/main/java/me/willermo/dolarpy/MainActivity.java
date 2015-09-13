@@ -109,7 +109,67 @@ public class MainActivity extends AppCompatActivity {
     public void showData(){
             data = sharedPreferences.getString("cotizacion","");
                 if(data.length()>1){
-                    mainObject = gson.fromJson(data,MainObject.class);
+
+                    try{
+                        mainObject = gson.fromJson(data,MainObject.class);
+                    }catch (Exception e){
+                        //con una linea tigo si uno queda sin saldo para internet a cualquier peticion http se responde con una pagina html
+                        //y esto rompe el json
+                        //la respuesta es esta grrrrr
+                        /*
+                           <html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt3"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                        <title>Internet Móvil Tigo </title>
+                        <link type="image/x-icon" rel="shortcut icon" href="./welcome_desktop_files/resources/fs/img/favicon.ico"><script type="text/javascript" src="./welcome_desktop_files/jquery-1.7.1.min.js.faces"></script><script type="text/javascript" src="./welcome_desktop_files/jquery.blockUI.js.faces"></script><script type="text/javascript" src="./welcome_desktop_files/ajaxUIHandler.js.faces"></script><script type="text/javascript" src="./welcome_desktop_files/messagesUIHandler.js.faces"></script><script type="text/javascript" src="./welcome_desktop_files/fvarias.js.faces"></script><script type="text/javascript" src="./welcome_desktop_files/sessionControl.js.faces"></script><script type="text/javascript" src="./welcome_desktop_files/jquery-ui-1.8.17.custom.min.js.faces"></script><script type="text/javascript" src="./welcome_desktop_files/jquery.ui.datepicker-es-py.js.faces"></script><link type="text/css" rel="stylesheet" href="./welcome_desktop_files/general.css"><link type="text/css" rel="stylesheet" href="./welcome_desktop_files/jquery-ui-1.8.14.custom.css"></head><body style="cursor: default;">
+                        <script type="text/javascript" charset="UTF-8">
+                        //<![CDATA[
+                        disableSelection(document.body);
+                        $(document).ready(function() {
+                        $('.datepicker').datepicker();
+                        });
+                        //]]>
+                        </script>
+                        <div id="container">
+                        <div id="header">
+                        <div id="headerTop">
+                        <div class="inside">
+                        <div id="logo"><a href="http://www.tigo.com.py/"><img src="./welcome_desktop_files/logo.png.faces" height="62" title="Tigo" width="87"></a>
+                        </div>
+                        <div id="titulositio"><img src="./welcome_desktop_files/internetmovil.jpg.faces" height="61" title="" width="222">
+                        </div>
+                        </div>
+                        </div>
+                        <div id="headerBottom"><div><div id="menu"></div><div id="submenu"></div></div></div>
+                        </div>
+                        <div id="body">
+                        <div id="internas_bkg">
+                        <form id="portalForm" name="portalForm" method="post" action="" enctype="application/x-www-form-urlencoded">
+                        <input type="hidden" name="portalForm" value="portalForm">
+                        <div id="contenido2"><span id="portalForm:accountInfoPanelGroup"><a href="http://www.tigo.com.py/seccion/internet-movil-tigo"><img src="./welcome_desktop_files/banner-welcome.jpg.faces" style="width: 504px; margin-left: 18px;"></a>
+                        <div id="cajawhite_big">
+                        <div id="topwhite_big"></div>
+                        <div id="bodywhite_big" style="text-align: justify;">
+                        <h3>Bienvenidos al Portal Movil Tigo</h3>
+                        <br><span style="font-size: 13px;">Aquí encontrarás todas las opciones para disfrutar al máximo de tu Internet Móvil con Tigo!</span>
+                        <br><br><br><input type="button" onclick="window.location.href=&#39;/fs/portal.faces&#39;; return false;" value="Haz click aqui para ir al Portal" class="btn_green_m" style="margin-left: 194px;">
+                        <br><br>
+                        </div>
+                        </div>
+                        <div id="footerwhite_big"></div></span>
+                        </div>
+                        <div id="columna_3ra"></div>
+                        </form>
+                        <div id="borde_inf"></div>
+                        </div>
+                        </div>
+                        <div id="footer">
+                        <div id="footerBottom">
+                        <div class="inside">Todos los derechos reservados por TELECEL S.A. | Desarrollado por Soluciones Corporativas - Lothar S.A.
+                        <ul>
+                        <li><a href="http://www.mic.gov.py/" target=
+                         */
+                        return;
+                    }
+
                     MainActivity.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
