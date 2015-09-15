@@ -35,7 +35,7 @@ public class FetchCotizacionService extends IntentService {
         OkHttpClient client = new OkHttpClient();
         client.setConnectTimeout(10, TimeUnit.SECONDS);
         client.setReadTimeout(10,TimeUnit.SECONDS);
-        Request request = new Request.Builder().url("http://dolar.melizeche.com/").build();
+        Request request = new Request.Builder().url("http://dolar.melizeche.com/api/1.0/").build();
         Response response=null;
 
 
